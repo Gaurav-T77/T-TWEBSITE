@@ -1,0 +1,481 @@
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+		   HTML
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+<table class="fold-table">
+  <thead>
+    
+    <tr>
+      <th>Train.no</th><th>Train Name</th><th>Classes</th><th>Arrival Time</th><th>Departure Time</th><th>Days Of Running</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="view">
+      <td>22456</td>
+      <td>Rajdhani Express</td>
+      <td>3A,2A,1A</td>
+      <td class="hour">10:00</td>
+      <td class="hour">10:10</td>
+      <td class="">Mon,Thu,Fri</td> 
+    </tr>
+    
+    
+    
+    <tr class="fold">
+      <td colspan="7">
+        <div class="fold-content">
+          <h3>Train Seat Availability</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Class</th><th>Seats Available</th><th>Fare</th><th>Food Services</th><th>Refundable</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>3A</td>
+                <td>132</td>
+                <td Class ="cur">3422</td>
+                <td>No</td>
+                <td>80%</td>
+                
+                
+              </tr>
+              <tr>
+                <td>2A</td>
+                <td>84</td>
+                <td Class ="cur">5631</td>
+                <td>Yes</td>
+                <td>72%</td>
+               
+              </tr>
+              <tr>
+               <td>1A</td>
+                <td>34</td>
+                <td Class ="cur">7482</td>
+                <td>Yes</td>
+                <td>66%</td>
+                
+              </tr>
+            </tbody>
+          </table>          
+        </div>
+      </td>
+    </tr>
+    
+    
+    
+    <tr class="view">
+      <td>2288456</td>
+      <td>Rajdhani Express</td>
+      <td>3A,2A,1A</td>
+      <td class="hour">10:00</td>
+      <td class="hour">10:10</td>
+      <td class="">Mon,Thu,Fri</td>
+      
+    </tr>
+    <tr class="fold">
+      <td colspan="7">
+        <div class="fold-content">
+          <h3>Train Seat Availability</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Class</th><th>Seats Available</th><th>Fare</th><th>Food Services</th><th>Refundable</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>3A</td>
+                <td>132</td>
+                <td Class ="cur">3422</td>
+                <td>No</td>
+                <td>80%</td>
+                
+                
+              </tr>
+              <tr>
+                <td>2A</td>
+                <td>84</td>
+                <td Class ="cur">5631</td>
+                <td>Yes</td>
+                <td>72%</td>
+               
+              </tr>
+              <tr>
+               <td>1A</td>
+                <td>34</td>
+                <td Class ="cur">7482</td>
+                <td>Yes</td>
+                <td>66%</td>
+                
+              </tr>
+            </tbody>
+          </table>          
+        </div>
+      </td>
+    </tr>
+    
+    
+    <tr class="view">
+      <td>22456</td>
+      <td>Rajdhani Express</td>
+      <td>3A,2A,1A</td>
+      <td class="hour">10:00</td>
+      <td class="hour">10:10</td>
+      <td class="">Mon,Thu,Fri</td>
+      
+    </tr>
+    <tr class="fold">
+      <td colspan="7">
+        <div class="fold-content">
+          <h3>Train Seat Availability</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Class</th><th>Seats Available</th><th>Fare</th><th>Food Services</th><th>Refundable</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>3A</td>
+                <td>132</td>
+                <td Class ="cur">3422</td>
+                <td>No</td>
+                <td>80%</td>
+                
+                
+              </tr>
+              <tr>
+                <td>2A</td>
+                <td>84</td>
+                <td Class ="cur">5631</td>
+                <td>Yes</td>
+                <td>72%</td>
+               
+              </tr>
+              <tr>
+               <td>1A</td>
+                <td>34</td>
+                <td Class ="cur">7482</td>
+                <td>Yes</td>
+                <td>66%</td>
+                
+              </tr>
+            </tbody>
+          </table>          
+        </div>
+      </td>
+    </tr>
+   
+     <tr class="view">
+      <td>22456</td>
+      <td>Rajdhani Express</td>
+      <td>3A,2A,1A</td>
+      <td class="hour">10:00</td>
+      <td class="hour">10:10</td>
+      <td class="">Mon,Thu,Fri</td>
+      
+    </tr>
+    <tr class="fold">
+      <td colspan="7">
+        <div class="fold-content">
+          <h3>Train Seat Availability</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Class</th><th>Seats Available</th><th>Fare</th><th>Food Services</th><th>Refundable</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>3A</td>
+                <td>132</td>
+                <td Class ="cur">3422</td>
+                <td>No</td>
+                <td>80%</td>
+                
+                
+              </tr>
+              <tr>
+                <td>2A</td>
+                <td>84</td>
+                <td Class ="cur">5631</td>
+                <td>Yes</td>
+                <td>72%</td>
+               
+              </tr>
+              <tr>
+               <td>1A</td>
+                <td>34</td>
+                <td Class ="cur">7482</td>
+                <td>Yes</td>
+                <td>66%</td>
+                
+              </tr>
+            </tbody>
+          </table>          
+        </div>
+      </td>
+    </tr>
+   
+      <tr class="view">
+      <td>22456</td>
+      <td>Rajdhani Express</td>
+      <td>3A,2A,1A</td>
+      <td class="hour">10:00</td>
+      <td class="hour">10:10</td>
+      <td class="">Mon,Thu,Fri</td>
+      
+    </tr>
+    <tr class="fold">
+      <td colspan="7">
+        <div class="fold-content">
+          <h3>Train Seat Availability</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Class</th><th>Seats Available</th><th>Fare</th><th>Food Services</th><th>Refundable</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>3A</td>
+                <td>132</td>
+                <td Class ="cur">3422</td>
+                <td>No</td>
+                <td>80%</td>
+                
+                
+              </tr>
+              <tr>
+                <td>2A</td>
+                <td>84</td>
+                <td Class ="cur">5631</td>
+                <td>Yes</td>
+                <td>72%</td>
+               
+              </tr>
+              <tr>
+               <td>1A</td>
+                <td>34</td>
+                <td Class ="cur">7482</td>
+                <td>Yes</td>
+                <td>66%</td>
+                
+              </tr>
+            </tbody>
+          </table>          
+        </div>
+      </td>
+    </tr>
+   
+      <tr class="view">
+      <td>22456</td>
+      <td>Rajdhani Express</td>
+      <td>3A,2A,1A</td>
+      <td class="hour">10:00</td>
+      <td class="hour">10:10</td>
+      <td class="">Mon,Thu,Fri</td>
+      
+    </tr>
+    <tr class="fold">
+      <td colspan="7">
+        <div class="fold-content">
+          <h3>Train Seat Availability</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Class</th><th>Seats Available</th><th>Fare</th><th>Food Services</th><th>Refundable</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>3A</td>
+                <td>132</td>
+                <td Class ="cur">3422</td>
+                <td>No</td>
+                <td>80%</td>
+                
+                
+              </tr>
+              <tr>
+                <td>2A</td>
+                <td>84</td>
+                <td Class ="cur">5631</td>
+                <td>Yes</td>
+                <td>72%</td>
+               
+              </tr>
+              <tr>
+               <td>1A</td>
+                <td>34</td>
+                <td Class ="cur">7482</td>
+                <td>Yes</td>
+                <td>66%</td>
+                
+              </tr>
+            </tbody>
+          </table>          
+        </div>
+      </td>
+    </tr>
+  
+      <tr class="view">
+      <td>22456</td>
+      <td>Rajdhani Express</td>
+      <td>3A,2A,1A</td>
+      <td class="hour">10:00</td>
+      <td class="hour">10:10</td>
+      <td class="">Mon,Thu,Fri</td>
+      
+    </tr>
+    <tr class="fold">
+      <td colspan="7">
+        <div class="fold-content">
+          <h3>Train Seat Availability</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Class</th><th>Seats Available</th><th>Fare</th><th>Food Services</th><th>Refundable</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>3A</td>
+                <td>132</td>
+                <td Class ="cur">3422</td>
+                <td>No</td>
+                <td>80%</td>
+                
+                
+              </tr>
+              <tr>
+                <td>2A</td>
+                <td>84</td>
+                <td Class ="cur">5631</td>
+                <td>Yes</td>
+                <td>72%</td>
+               
+              </tr>
+              <tr>
+               <td>1A</td>
+                <td>34</td>
+                <td Class ="cur">7482</td>
+                <td>Yes</td>
+                <td>66%</td>
+                
+              </tr>
+            </tbody>
+          </table>          
+        </div>
+      </td>
+    </tr>
+ </tbody>
+          </table>          
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+		  CSS
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+
+@import url('https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css');
+
+.pcs:after { content: " pcs"; }
+.cur:before { content: "₹"; }
+.hour:after { content: " Hours"; }
+// --------------------------
+* { box-sizing: border-box; }
+body { padding: .2em 2em; }
+// Table
+table {
+  width: 100%;
+  th { text-align: left; border-bottom: 1px solid #ccc;}
+  th, td { padding: .4em; }
+}
+
+// fold table 
+table.fold-table {
+  > tbody {
+    // view segment
+    > tr.view {
+      td, th {cursor: pointer;}
+      td:first-child, 
+      th:first-child { 
+        position: relative;
+        padding-left:20px;
+        &:before {
+          position: absolute;
+          top:50%; left:5px;
+          width: 9px; height: 16px;
+          margin-top: -8px;
+          font: 16px fontawesome;
+          color: #999;
+          content: "\f0d7";
+          transition: all .3s ease;
+        }
+      }
+   &:nth-child(4n-1) {
+  background-color: #eee;}
+      
+      &.open {
+        background: tomato;
+        color: white;
+        td:first-child, th:first-child {
+          &:before {
+            transform: rotate(-180deg);
+            color: #333;
+          }
+        }
+      }
+    }
+  
+    // fold segment
+    > tr.fold {
+      display: none;
+      &.open { display:table-row; }
+    }
+  }
+}
+
+
+
+// fold content 
+.fold-content {
+  padding: .5em;
+  h3 { margin-top:0; }
+  > table {
+    border: 2px solid #ccc;
+    > tbody {
+      tr:nth-child(odd) {
+        background: #eee;
+      }
+    }
+  }
+}
+
+#t01 tr:nth-child(even) {
+  background-color: #eee;
+}
+
+
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+		   JS
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+
+$(function(){
+  $(".fold-table tr.view").on("click", function(){
+    $(this).toggleClass("open").next(".fold").toggleClass("open");
+  });
+});

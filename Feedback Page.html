@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>Feedback Form</title>
+ 
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<style>
+
+header{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 70px;
+font-size: 18px;
+
+  }
+.responsive{
+    max-width: 100%;
+    height: auto;
+}
+.logo{
+    cursor: pointer;
+}
+.nav-area{
+    list-style: none;
+}
+.nav-area li{
+    display: inline-block;
+    padding: 0
+     15px;
+    text-transform: uppercase;
+}
+.nav-area li a{
+    transition: all .3s ease 0s;
+    color: rgb(255, 85, 7);
+}
+.nav-area li a:hover{
+    color: #0b2013;
+}
+.btn-area {
+    cursor: pointer;
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    border-radius: 5px;
+    background: #006C87;  
+    transition-duration: 0.4s;
+    cursor: pointer;          
+}
+.btn-area:hover {
+    background-color: #4CAF50;
+    color: white;
+  }
+  .colored {
+    background-color: aliceblue;
+    width: 100%;
+    margin-left: 48px;
+    float: none;
+}
+</style>
+<script>
+    $(function()
+    {
+        function after_form_submitted(data)
+        {
+            if(data.result == 'success')
+            {
+                $('form#reused_form').hide();
+                $('#success_message').show();
+                $('#error_message').hide();
+            }
+            else
+            {
+                $('#error_message').append('<ul></ul>');
+    
+                jQuery.each(data.errors,function(key,val)
+                {
+                    $('#error_message ul').append('<li>'+key+':'+val+'</li>');
+                });
+                $('#success_message').hide();
+                $('#error_message').show();
+    
+                //reverse the response on the button
+                $('button[type="button"]', $form).each(function()
+                {
+                    $btn = $(this);
+                    label = $btn.prop('orig_label');
+                    if(label)
+                    {
+                        $btn.prop('type','submit' );
+                        $btn.text(label);
+                        $btn.prop('orig_label','');
+                    }
+                });
+    
+            }//else
+        }
+    
+        $('#reused_form').submit(function(e)
+          {
+            e.preventDefault();
+    
+            $form = $(this);
+            //show some response on the button
+            $('button[type="submit"]', $form).each(function()
+            {
+                $btn = $(this);
+                $btn.prop('type','button' );
+                $btn.prop('orig_label',$btn.text());
+                $btn.text('Sending ...');
+            });
+    
+    
+                        $.ajax({
+                    type: "POST",
+                    url: 'handler.php',
+                    data: $form.serialize(),
+                    success: after_form_submitted,
+                    dataType: 'json'
+                });
+    
+          });
+    });
+    </script>
+</head>
+
+
+<header>
+    <a href="BookingMain.html" > <img class="logo" src="https://i.postimg.cc/XYgSxQQZ/logo.png" alt="" ></a>
+    <nav>
+        <ul class="nav-area">
+  <li><a href="#" style="text-decoration: none; font-family: 'Times New Roman', Times, serif;"><b>home</b></a></li>
+  <li><a href="#" style="text-decoration: none; font-family: 'Times New Roman', Times, serif;"><b>About</b></a></li>
+  <li><a href="#" style="text-decoration: none; font-family: 'Times New Roman', Times, serif;"><b>portfolio</b></a></li>
+  <li><a href="#" style="text-decoration: none; font-family: 'Times New Roman', Times, serif;"><b>services</b></a></li>
+  <li><a href="#" style="text-decoration: none; font-family: 'Times New Roman', Times, serif;"><b>contact</b></a></li>
+  </ul>
+  
+  </nav>
+    <a href="#" class="btn-area" style="text-decoration: none; font-family: 'Times New Roman', Times, serif; "><b>login</b></a>
+  </header>
+  
+
+
+<body style="background-image: url('bg9.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center; ">
+   
+   
+   <br>
+    <br>
+<div class="row " style="margin-left: 450px;">
+        <div class="col-md-6 col-md-offset-3">
+            <h1 style="margin-left: 183px;font-size: xx-large;">Feedback</h1>
+           <br>
+            <p style="color: rgb(255, 255, 255);">
+                Please provide your feedback below:
+            </p>
+            <form role="form" style="background-color: rgba(0, 0, 0, 0.555);padding: 9px;" method="post" id="reused_form">
+                <div class="row">
+                    <div class="col-sm-12 form-group">
+                    <label style="color: rgb(255, 255, 255);">How do you rate your overall experience?</label>
+                    <p>
+                        <label class="radio-inline"style="color: rgb(255, 255, 255);">
+                        <input type="radio" name="experience" id="radio_experience" value="bad" >
+                        Bad
+                        </label>
+    
+                        <label class="radio-inline"style="color: rgb(255, 255, 255);">
+                        <input type="radio" name="experience" id="radio_experience" value="average" >
+                        Average
+                        </label>
+    
+                        <label class="radio-inline"style="color: rgb(255, 255, 255);">
+                        <input type="radio" name="experience" id="radio_experience" value="good" >
+                        Good
+                        </label>
+                    </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 form-group">
+                        <label for="comments"style="color: rgb(255, 255, 255);">
+                            Comments:</label>
+                        <textarea class="form-control" type="textarea" name="comments" id="comments" placeholder="Your Comments" maxlength="6000" rows="7"></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 form-group">
+                        <label for="name"style="color: rgb(255, 255, 255);">
+                            Your Name:</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="col-sm-6 form-group">
+                        <label for="email"style="color: rgb(255, 255, 255);">
+                            Email:</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                </div>
+    
+                            <div class="row">
+                    <div class="col-sm-12 form-group">
+                        <button type="submit" class="btn btn-lg btn-primary btn-block" >Send →</button>
+                    </div>
+                </div>
+    
+            </form>
+            <div id="success_message" style="width:100%; height:100%; display:none; ">
+                <h3>Posted your feedback successfully!</h3>
+            </div>
+            <div id="error_message"
+                    style="width:100%; height:100%; display:none; ">
+                        <h3>Error</h3>
+                        Sorry there was an error sending your form.
+    
+            </div>
+        </div>
+    </div>
+<br>
+    <br
+
+</body>
+</html>
+

@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>Search Result - Flight</title>
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="Css\style.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+ 
+  
+  
+  <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'> 
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+  <link href='https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css'>
+  <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js'></script>
+
+<script>
+    $(document).ready(function() {
+$('#example').DataTable();
+} );
+</script>
+
+
+
+<style>
+body{
+  background-image: url('bg14.jpg');  
+   background-position: center center ;  
+   background-size:cover; 
+}
+
+
+header{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 70px;
+font-size: 18px;
+
+  }
+.responsive{
+    max-width: 100%;
+    height: auto;
+}
+.logo{
+    cursor: pointer;
+}
+.nav-area{
+    list-style: none;
+}
+.nav-area li{
+    display: inline-block;
+    padding: 0
+     15px;
+    text-transform: uppercase;
+}
+.nav-area li a{
+    transition: all .3s ease 0s;
+    color: #fff;
+}
+.nav-area li a:hover{
+    color: #9becba;
+}
+.btn-area {
+    cursor: pointer;
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    border-radius: 5px;
+    background: #006C87;  
+    transition-duration: 0.4s;
+    cursor: pointer;          
+}
+.btn-area:hover {
+    background-color: #4CAF50;
+    color: white;
+  }
+  .ibutton{
+     background-color: white;
+     color: #4285f4;
+     border-color: #4285f4;
+     border-radius: 24px;
+     height: 4 px;
+     width: 80%;
+     cursor: pointer; 
+    padding-right:18px ;
+    padding-left:12px ;
+    }  
+ .ibutton:hover{
+     background-color: #4285f4;
+ color: #fff;
+   transition: 0.5s;
+  }
+  
+ /*------------------------------------
+               Question MarK
+--------------------------------------*/
+.help-tip{
+    position: absolute;
+    top: 195px;
+    right: 478px;
+    text-align: center;
+    background-color: #083c57;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    font-size: 14px;
+    line-height: 26px;
+    cursor: default;
+}
+
+.help-tip:before{
+    content:'?';
+    font-weight: bold;
+    color:#fff;
+}
+
+.help-tip:hover p{
+    display:block;
+    transform-origin: 100% 0%;
+
+    -webkit-animation: fadeIn 0.3s ease-in-out;
+    animation: fadeIn 0.3s ease-in-out;
+
+}
+
+.help-tip p{    /* The tooltip */
+    display: none;
+    text-align: left;
+    background-color: #1E2021;
+    padding: 20px;
+    width: 300px;
+    position: absolute;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    right: -4px;
+    color: #FFF;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.help-tip p:before{ /* The pointer of the tooltip */
+    position: absolute;
+    content: '';
+    width:0;
+    height: 0;
+    border:6px solid transparent;
+    border-bottom-color:#1E2021;
+    right:10px;
+    top:-12px;
+}
+
+.help-tip p:after{ /* Prevents the tooltip from being hidden */
+    width:100%;
+    height:40px;
+    content:'';
+    position: absolute;
+    top:-40px;
+    left:0;
+}
+
+/* CSS animation */
+
+@-webkit-keyframes fadeIn {
+    0% { 
+        opacity:0; 
+        transform: scale(0.6);
+    }
+
+    100% {
+        opacity:100%;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeIn {
+    0% { opacity:0; }
+    100% { opacity:100%; }
+}
+
+</style>
+
+
+
+
+<script>
+    $(function(){
+  $(".fold-table tr.view").on("click", function(){
+    $(this).toggleClass("open").next(".fold").toggleClass("open");
+  });
+});
+</script>
+
+</head>
+ 
+
+<header>
+  <a href="BookingMain.html" > <img class="logo" src="https://i.postimg.cc/XYgSxQQZ/logo.png" alt="" ></a>
+  <nav>
+      <ul class="nav-area">
+<li><a href="#" style="text-decoration: none; font-family: 'Times New Roman', Times, serif;"><b>home</b></a></li>
+<li><a href="#" style="text-decoration: none; font-family: 'Times New Roman', Times, serif;"><b>About</b></a></li>
+<li><a href="#" style="text-decoration: none; font-family: 'Times New Roman', Times, serif;"><b>portfolio</b></a></li>
+<li><a href="#" style="text-decoration: none; font-family: 'Times New Roman', Times, serif;"><b>services</b></a></li>
+<li><a href="#" style="text-decoration: none; font-family: 'Times New Roman', Times, serif;"><b>contact</b></a></li>
+</ul>
+
+</nav>
+  <a href="#" class="btn-area" style="text-decoration: none; font-family: 'Times New Roman', Times, serif; "><b>login</b></a>
+</header>
+
+
+<body>
+    <br>
+    <br>
+    <br>
+
+<link rel="stylesheet" href="Css\jquery.dataTables.min.css">
+<script type="text/javascript" src="jS\jquery.dataTables.min.js"></script>
+<div class="container">
+  <div class="help-tip">
+    <p>To Filter the Result,Click on the Category column on the Table !!!</p>
+  </div> 
+  <h2 style=" text-align: center;color: rgb(4, 218, 136); font-family: 'Times New Roman', Times, serif;font-size: 60px; background-color: rgba(0, 0, 0, 0.5);border-radius: 5px;">FLIGHT BOOKING</h2>
+    </div>
+    <table id="example" class="table greenTable " style="width:91% ;background-color: lightgreen;">
+        <thead>
+            <tr>
+                <th>Departure </th>
+                <th>Arrival</th>
+                <th>Departure Time</th>
+                <th>Arrival Time</th>
+                <th>Flight No.</th>
+                <th>Flight Name</th>
+                <th>Duration</th>
+                <th>Class</th>
+                <th>Fare(incl. GST)</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Delhi</td>
+                <td>Goa</td>
+                <td>12:45</td>
+                <td>12:45</td>
+                <td>3242343124</td>
+                <td>Kingfisher Airways</td>
+                <td>3 hrs</td>
+                <td>Economy</td>
+                <td>$450</td>
+                <td><button class="ibutton">Book</button></td>
+        
+            </tr>
+            
+    </table>
+</div>
+
+
+              
+<br><br><br><br><br><br><br><br><br>
+<!--FOOTER-->
+.
+<div class="overlayfilm stick">
+  <!-- Footer -->
+  <footer class="page-footer font-small stylish-color-dark pt-4" style=" color: rgb(255, 255, 255);" >
+  
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left">
+  
+      <!-- Grid row -->
+      <div class="row">
+  
+        <!-- Grid column -->
+        <div class="col-md-4 mx-auto ">
+  
+          <!-- Content -->
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4 blacktext">Tourism</h5>
+          <p style="font-weight: normal; font-family: 'Times New Roman', Times, serif;">Tourism  is  travel  for  pleasure  or business,  also  the  theory  and  practice  of  touring,  the  business  of  attracting, accommodating, and entertaining tourists, and the business of operating tours.</p>
+  
+        </div>
+        <!-- Grid column -->
+  
+        <hr class="clearfix w-100 d-md-none">
+  
+        <!-- Grid column -->
+        <div class="col-md-2 mx-auto" >
+  
+          <!-- Links -->
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4 blacktext">Quick Links</h5>
+          <ul class="list-unstyled"  >
+            <li >
+              <a href="#!" onMouseOver="this.style.color='aqua'"onMouseOut="this.style.color='white'" style="text-decoration:none;color: white; font-weight:normal; font-family: 'Times New Roman', Times, serif;">Home</a>
+            </li>
+            <li>
+              <a href="#!"onMouseOver="this.style.color='aqua'"onMouseOut="this.style.color='white'"style="text-decoration:none; color: white;font-weight:normal;font-family: 'Times New Roman', Times, serif;">Google Maps</a>
+            </li>
+            <li>
+              <a href="#!" onMouseOver="this.style.color='aqua'"onMouseOut="this.style.color='white'" style="text-decoration:none; color: white;font-weight:normal;font-family: 'Times New Roman', Times, serif;">Blogs</a>
+            </li>
+          </ul>
+      
+  
+        </div>
+        <!-- Grid column -->
+  
+        <hr class="clearfix w-100 d-md-none">
+  
+        <!-- Grid column -->
+        <div class="col-md-2 mx-auto">
+  
+          <!-- Links -->
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4 blacktext">Services</h5>
+  
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!" onMouseOver="this.style.color='aqua'"onMouseOut="this.style.color='white'" style="text-decoration:none; color: white;font-weight:normal; font-family: 'Times New Roman', Times, serif;">Train Booking</a>
+            </li>
+            <li>
+              <a href="#!" onMouseOver="this.style.color='aqua'"onMouseOut="this.style.color='white'" style="text-decoration:none; color: white;font-weight:normal;font-family: 'Times New Roman', Times, serif;">Flights Booking</a>
+            </li>
+            <li>
+              <a href="#!" onMouseOver="this.style.color='aqua'"onMouseOut="this.style.color='white'" style="text-decoration:none; color: white; font-weight:normal;font-family: 'Times New Roman', Times, serif;">Explore More</a>
+            </li>
+          </ul>
+  
+        </div>
+        <!-- Grid column -->
+  
+        <hr class="clearfix w-100 d-md-none">
+  
+        <!-- Grid column -->
+        <div class="col-md-2 mx-auto">
+  
+          <!-- Links -->
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4 blacktext">About Us</h5>
+  
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!" onMouseOver="this.style.color='aqua'"onMouseOut="this.style.color='white'" style="text-decoration:none; color: white; font-weight:normal; font-family: 'Times New Roman', Times, serif; ">Contact Us</a>
+          </li>
+            <li>
+              <a href="#!" onMouseOver="this.style.color='aqua'"onMouseOut="this.style.color='white'" style="text-decoration:none; color: white; font-weight:normal;font-family: 'Times New Roman', Times, serif;">Partners</a>
+            </li>
+             <li>
+              <a href="#!" onMouseOver="this.style.color='aqua'"onMouseOut="this.style.color='white'" style="text-decoration:none; color: white; font-weight:normal;font-family: 'Times New Roman', Times, serif;">Site Map</a>
+            </li>
+          </ul>
+  
+        </div>
+        <!-- Grid column -->
+  
+      </div>
+      <!-- Grid row -->
+  
+    </div>
+    <!-- Footer Links -->
+ 
+    
+  
+    <ul class="list-unstyled list-inline text-center py-2">
+      <li class="list-inline-item">
+        <h5 class="mb-1 blacktext" style="font-size: 18px;">Register for free</h5>
+      </li>
+      <li class="list-inline-item">
+        <a href="#!" class="btn btn-danger btn-rounded">Sign up!</a>
+      </li>
+    </ul>
+    <!-- Call to action -->
+ 
+    <!-- Social buttons -->
+      <ul class="list-unstyled list-inline text-center " >
+      <li class="list-inline-item "style="font-size: 25px; color:#fffff " >
+        <a class="btn-floating btn-fb mx-1">
+         <i class="fab fa-facebook-f" ></i>
+        </a>
+      </li>
+      <li class="list-inline-item darktext"style="font-size: 25px; color:#fffff">
+        <a class="btn-floating btn-tw mx-1">
+          <i class="fab fa-twitter"> </i>
+        </a>
+      </li>
+      <li class="list-inline-item darktext"style="font-size: 25px; color:#fffff">
+        <a class="btn-floating btn-gplus mx-1">
+          <i class="fab fa-google-plus-g"> </i>
+        </a>
+      </li>
+      <li class="list-inline-item darktext" style="font-size: 25px;color:#fffff">
+        <a class="btn-floating btn-li mx-1">
+          <i class="fab fa-linkedin-in"> </i>
+        </a>
+      </li>
+    </ul>
+    
+    <!-- Social buttons -->
+  </footer>
+  <!-- Footer -->
+  </div>
+ 
+ 
+  <!--FOOTER-->
+ 
+
+
+
+  </body>
+  </html>

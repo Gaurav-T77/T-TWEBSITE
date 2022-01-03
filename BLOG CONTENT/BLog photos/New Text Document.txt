@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  width:100%;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 15px;
+  text-align: left;
+}
+#t01 tr:nth-child(even) {
+  background-color: #eee;
+}
+#t01 tr:nth-child(odd) {
+ background-color: #fff;
+}
+#t01 th {
+  background-color: black;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+
+<table id="t01">
+  <tr>
+    <th>Train.No</th>
+    <th>Train Name</th> 
+    <th>Class</th>
+ 	<th>Days of Running</th>
+ <th>Arrival Time</th>
+ <th>Departure Time</th>
+ </tr>
+  <tr>
+    <td>23423</td>
+    <td>RajDhani Express</td>
+    <td>3A,2A,1A</td>
+  <td>Mon,Tue,Fri,Sun</td>
+  <td>10:00 Hours</td>
+  <td>10:15 Hours</td>
+  </tr>
+  <tr>
+    <td>67567</td>
+    <td>Duronto Express</td>
+    <td>3A,2A,1A</td>
+  <td>Mon,Wed,Sat</td>
+  <td>17:05 Hours</td>
+  <td>17:15 Hours</td>
+  </tr>
+  <tr>
+    <td>96785</td>
+    <td>Mangla Express</td>
+    <td>Sleeper,3A,2A</td>
+ 	<td>Tue,Wed,Fri</td>
+  <td>22:20 Hours</td>
+  <td>22:55 Hours</td>
+  </tr>
+<tr>
+<td>324456</td>
+    <td>Raptisagar Express</td>
+    <td>Sleeper,3A</td>
+  <td>Wed,Thu,Sun</td>
+<td>13:00 Hours</td>
+<td>13:35 Hours</td>
+</tr>
+</table>
+
+</body>
+</html>

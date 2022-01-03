@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>TheSafar</title>
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#datepicker" ).datepicker();
+  } );
+</script>
+  
+<link rel="stylesheet" href="Css/MaIN.CSS">
+
+<script>
+   webshim.setOptions('forms-ext', {
+    replaceUI: 'auto',
+    types: 'date',
+    date: {
+        startView: 2,
+        inlinePicker: true,
+        classes: 'hide-inputbtns'
+    }
+});
+webshim.setOptions('forms', {
+    lazyCustomMessages: true
+});
+//start polyfilling
+webshim.polyfill('forms forms-ext');
+
+//only last example using format display
+$(function () {
+    $('.format-date').each(function () {
+        var $display = $('.date-display', this);
+        $(this).on('change', function (e) {
+            var localizedDate = webshim.format.date($.prop(e.target, 'value'));
+            $display.html(localizedDate);
+        });
+    });
+});
+ </script>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500&family=Bree+Serif&display=swap"
+rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">    
+<!-- favicon img -->
+		<link rel="shortcut icon" type="image/icon" href="assets/logo/favicon.png"/>
+
+		<!--font-awesome.min.css-->
+		<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+
+		<!-- range css-->
+        <link rel="stylesheet" href="assets/css/jquery-ui.min.css" />
+
+		<!-- bootsnav -->
+		<link rel="stylesheet" href="assets/css/bootsnav.css"/>
+
+  
+   
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="bootstrap.min.css">
+  
+<!--style.css-->
+<link rel="stylesheet" href="assets/css/style.css" />
+
+
+
+<!-- Script dropdown -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src='https://github.com/select2/select2/blob/develop/dist/js/select2.min.js' type='text/javascript'></script>
+
+<!-- CSS dropdown-->
+<link href='https://github.com/select2/select2/blob/develop/dist/css/select2.min.css' rel='stylesheet' type='text/css'>
+
+
+</head>
+<body  style="width: auto;">
+<header>
+  <img class="logo navbar-brand23 " src="The Safar v6.png"  alt="";>
+  <nav>
+      <ul class="nav-area ">
+<li><a href="#" style="text-decoration:none;">Home</a></li>
+<li><a href="#" style="text-decoration:none;">Packages</a></li>
+<li><a href="#" style="text-decoration:none;">Blogs</a></li>
+<li><a href="#" style="text-decoration:none;">Explore More</a></li>
+<li><a href="#" style="text-decoration:none;">About Us</a></li>
+</ul>
+</nav>
+  <a href="#" style="text-decoration:none;" class="btn-area">login</a>
+</header>
+
+  
+
+<div class="">
+<div class="h-screen w-screen view" style="opacity: 0.82;">
+ <div class="container h-screen mx-auto flex justify-center items-center p-2 md:p-0  " >
+      <div class="border border-gray-300 p-6 grid grid-cols-1 gap-6 bg-white shadow-lg rounded-lg " >
+         
+        <div class="flex flex-col md:flex-row" >
+             
+            <div class="">
+                  <select class="border p-2 rounded">
+                      <option>One-Way</option>
+                      <option>Round-Trip</option>
+                      <option>Multicity</option>
+                  </select>
+              </div>
+              
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="grid grid-cols-2 gap-2 border border-gray-200 p-2 rounded">
+                  <div class="flex border rounded bg-gray-300 items-center p-2 ">
+                    <svg class="fill-current text-gray-800 mr-2 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                      <path class="heroicon-ui"
+                            d="M14 5.62l-4 2v10.76l4-2V5.62zm2 0v10.76l4 2V7.62l-4-2zm-8 2l-4-2v10.76l4 2V7.62zm7 10.5L9.45 20.9a1 1 0 0 1-.9 0l-6-3A1 1 0 0 1 2 17V4a1 1 0 0 1 1.45-.9L9 5.89l5.55-2.77a1 1 0 0 1 .9 0l6 3A1 1 0 0 1 22 7v13a1 1 0 0 1-1.45.89L15 18.12z"/>
+                  </svg>
+                                      <!-- Dropdown --> 
+                <select id='selUser' style=' height:auto; width: 200px; overflow: auto;'>
+                  <option value='0'>From...</option> 
+                  <option value='1'>Delhi</option> 
+                  <option value='2'>Bengaluru</option> 
+                  <option value='3'>Mumbai</option> 
+                  <option value='4'>Kolkata</option> 
+                  <option value='5'>Chennai</option> 
+                
+
+                </select>
+                <br/>
+                <div id='result'></div>
+                      </div>
+                  <div class="flex border rounded bg-gray-300 items-center p-2 ">
+                    <svg class="fill-current text-gray-800 mr-2 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                      <path class="heroicon-ui"
+                            d="M14 5.62l-4 2v10.76l4-2V5.62zm2 0v10.76l4 2V7.62l-4-2zm-8 2l-4-2v10.76l4 2V7.62zm7 10.5L9.45 20.9a1 1 0 0 1-.9 0l-6-3A1 1 0 0 1 2 17V4a1 1 0 0 1 1.45-.9L9 5.89l5.55-2.77a1 1 0 0 1 .9 0l6 3A1 1 0 0 1 22 7v13a1 1 0 0 1-1.45.89L15 18.12z"/>
+                  </svg>
+                                    <!-- Dropdown --> 
+                  <select id='selUser' style=' height:auto; width: 200px; overflow: auto;'>
+                    <option value='0'>To...</option> 
+                    <option value='1'>Goa</option> 
+                    <option value='2'>Thiruvananthpuram</option> 
+                    <option value='3'>Kashmir</option> 
+                    <option value='4'>GandhiNagar</option> 
+                    <option value='5'>Bhubaneshwar</option> 
+                    
+
+                  </select>
+                  </div>
+              </div>
+              <div class="grid grid-cols-2 gap-2 border border-gray-200 p-2 rounded">
+                  <div class="flex border rounded bg-gray-300 items-center p-2 ">
+                    <br>
+                    <form action="#" class="ws-validate">
+                        <div class="form-row show-inputbtns">
+                        &nbsp&nbsp&nbsp&nbsp&nbsp<input type="date" data-date-inline-picker="false" data-date-open-on-focus="true" />
+                        </div>
+                    </form>
+                    
+                  </div>
+                  <center>  
+            
+                    <input type="checkbox" style="opacity: 0.9; " id="switch"
+                          class="checkbox"/> 
+                    <label for="switch" class="toggle"> 
+                      <p style="color:whitesmoke; font-family:'Oswald', sans-serif;">Train  &nbsp  Flight</p> 
+                    </label> 
+                  </center> 
+
+              </div>
+              
+            </div>
+          <div class="flex justify-center"><button class="p-2 border w-1/4 rounded-md bg-gray-800 text-white">Search</button></div>
+      </div>
+  </div>
+</div>
+</div>
+</center>
+
+
+<!--packages start-->
+
+<section id="pack" class="packages"style="background-image: url('paul-gilmore-xAMZ67ZWIgY-unsplash.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center; ">
+  <div class="view " style="background-image: url('paul-gilmore-xAMZ67ZWIgY-unsplash.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center; ">
+  <div class="container">
+    <div class="gallary-header text-center"style="color: antiquewhite;" >
+      <h1 style="font-size: 300%;" >
+        <br>
+        <ul>-OUR PACKAGES-</ul> 
+      </h1>
+    <br>
+    </div><!--/.gallery-header-->
+    <div class="packages-content">
+      <div class="row">
+
+        <div class="col-md-4 col-sm-6 thumbs">
+          <div class="single-package-item ">
+            <img src="Package_photos\KulluManali.jpg" alt="package-place">
+            <div class="single-package-item-txt">
+              <h3>Manali, Himachal Pradesh <span class="pull-right">₹9000</span></h3>
+              
+              <div class="packages-para">
+                <p>
+                  <span>
+                    <i class="fa fa-angle-right"></i> 5 Days 6 Nights
+                  </span>
+                  <i class="fa fa-angle-right"></i>  5 star accomodation
+                </p>
+                <p>
+                  <span>
+                    <i class="fa fa-angle-right"></i>  Transportation
+                  </span>
+                  <i class="fa fa-angle-right"></i>  Trekking & Sight-Seeing
+                 </p>
+              </div><!--/.packages-para-->
+              <div class="packages-review">
+                <p>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <span>4844 review</span>
+                </p>
+              </div><!--/.packages-review-->
+              <div class="about-btn">
+                <button  class="about-view packages-btn">
+                  book now
+                </button>
+              </div><!--/.about-btn-->
+            </div><!--/.single-package-item-txt-->
+          </div><!--/.single-package-item-->
+
+        </div><!--/.col-->
+
+        <div class="col-md-4 col-sm-6 thumbs">
+          <div class="single-package-item ">
+            <img src="Package_photos\GOA2.jpg" alt="package-place">
+            <div class="single-package-item-txt">
+              <h3>Goa <span class="pull-right">₹10000</span></h3>
+              <div class="packages-para">
+                <p>
+                  <span>
+                    <i class="fa fa-angle-right"></i> 6 Days 7 nights
+                  </span>
+                  <i class="fa fa-angle-right"></i>  5 star accomodation
+                </p>
+                <p>
+                  <span>
+                    <i class="fa fa-angle-right"></i>  Water Sports
+                  </span>
+                  <i class="fa fa-angle-right"></i>Music Festivals 
+                 </p>
+              </div><!--/.packages-para-->
+              <div class="packages-review">
+                <p>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <span>6879 review</span>
+                </p>
+              </div><!--/.packages-review-->
+              <div class="about-btn">
+                <button  class="about-view packages-btn">
+                  book now
+                </button>
+              </div><!--/.about-btn-->
+            </div><!--/.single-package-item-txt-->
+          </div><!--/.single-package-item-->
+
+        </div><!--/.col-->
+        
+        <div class="col-md-4 col-sm-6 thumbs">
+          <div class="single-package-item ">
+            <img src="Package_photos\Jog falls.jpg" alt="package-place" >
+            <div class="single-package-item-txt">
+              <h3>Jog Falls,Karnataka <span class="pull-right">₹8000</span></h3>
+              <div class="packages-para">
+                <p>
+                  <span>
+                    <i class="fa fa-angle-right"></i> 4 Days 5 Nights
+                  </span>
+                  <i class="fa fa-angle-right"></i>  3 star accomodation
+                </p>
+                <p>
+                  <span>
+                    <i class="fa fa-angle-right"></i>  transportation
+                  </span>
+                  <i class="fa fa-angle-right"></i>  Sight-Seeing & Hiking
+                 </p>
+              </div><!--/.packages-para-->
+              <div class="packages-review">
+                <p>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>                  
+                  <span>2154 review</span>
+                </p>
+              </div><!--/.packages-review-->
+              <div class="about-btn">
+                <button  class="about-view packages-btn">
+                  book now
+                </button>
+              </div><!--/.about-btn-->
+             
+            </div><!--/.single-package-item-txt-->
+          </div><!--/.single-package-item-->
+
+        </div><!--/.col-->
+        
+        <div class="col-md-4 col-sm-6 thumbs">
+          <div class="single-package-item ">
+            <img src="Package_photos\IndiaGate1.jpg " alt="package-place">
+            <div class="single-package-item-txt">
+              <h3>Delhi <span class="pull-right">₹14000</span></h3>
+              <div class="packages-para">
+                <p>
+                  <span>
+                    <i class="fa fa-angle-right"></i> 4 days 5 nights
+                  </span>
+                  <i class="fa fa-angle-right"></i>  4 star accomodation
+                </p>
+                <p>
+                  <span>
+                    <i class="fa fa-angle-right"></i>  transportation
+                  </span>
+                  <i class="fa fa-angle-right"></i>  Historical Places
+                 </p>
+              </div><!--/.packages-para-->
+              <div class="packages-review">
+                <p>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <span>2544 review</span>
+                </p>
+              </div><!--/.packages-review-->
+              <div class="about-btn">
+                <button  class="about-view packages-btn">
+                  book now
+                </button>
+              </div><!--/.about-btn-->
+           
+          </div><!--/.single-package-item-txt-->
+          </div><!--/.single-package-item-->
+
+        </div><!--/.col-->
+        
+        <div class="col-md-4 col-sm-6 thumbs">
+          <div class="single-package-item ">
+            <img src="Package_photos\Shillong.jpg" alt="package-place">
+            <div class="single-package-item-txt">
+              <h3>Shllong, Meghalaya <span class="pull-right">₹12000</span></h3>
+              <div class="packages-para">
+                <p>
+                  <span>
+                    <i class="fa fa-angle-right"></i> 7 days 8 nights
+                  </span>
+                  <i class="fa fa-angle-right"></i>  3 star accomodation
+                </p>
+                <p>
+                  <span>
+                    <i class="fa fa-angle-right"></i>  transportation
+                  </span>
+                  <i class="fa fa-angle-right"></i> Trekking & Sight-Seeing
+                 </p>
+              </div><!--/.packages-para-->
+              <div class="packages-review">
+                <p>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  
+                  <span>3784 review</span>
+                </p>
+              </div><!--/.packages-review-->
+              <div class="about-btn">
+                <button  class="about-view packages-btn">
+                  book now
+                </button>
+              </div><!--/.about-btn-->
+            </div><!--/.single-package-item-txt-->
+          </div><!--/.single-package-item-->
+
+        </div><!--/.col-->
+        
+        <div class="col-md-4 col-sm-6 thumbs">
+          <div class="single-package-item ">
+            <img src="Package_photos\Ooty.jpg" alt="package-place">
+            <div class="single-package-item-txt">
+              <h3>Ooty Hills, Tamil Nadu <span class="pull-right">₹20000</span></h3>
+              <div class="packages-para">
+                <p>
+                  <span>
+                    <i class="fa fa-angle-right"></i> 6 days 7 nights
+                  </span>
+                  <i class="fa fa-angle-right"></i>  5 star accomodation
+                </p>
+                <p>
+                  <span>
+                    <i class="fa fa-angle-right"></i>  transportation
+                  </span>
+                  <i class="fa fa-angle-right"></i>  Sight-Seeing & Boating 
+                 </p>
+              </div><!--/.packages-para-->
+              <div class="packages-review">
+                <p>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <span>4564 review</span>
+                </p>
+              
+            </div><!--/.packages-review-->
+            
+              <div class="about-btn">
+                <button  class="about-view packages-btn">
+                  book now
+                </button>
+              </div><!--/.about-btn-->
+            
+            </div><!--/.single-package-item-txt-->
+          </div><!--/.single-package-item-->
+
+        </div><!--/.col-->
+
+      </div><!--/.row-->
+      <br><br><br><br><br>
+    </div><!--/.packages-content-->
+  </div><!--/.container-->
+</div>
+
+</section><!--/.packages-->
+
+<!--packages end-->
+
+
+
+
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1171317.3664408482!2d76.3973860034511!3d28.606420288613677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce2daa9eb4d0b%3A0x717971125923e5d!2sIndia%20Gate!5e0!3m2!1sen!2sin!4v1602092346808!5m2!1sen!2sin"  width="100%" height="390" frameborder="0" style="border:0" allowfullscreen></iframe>
+    
+  
+
+<div class="overlayfilm" >
+<!-- Footer -->
+<!--FOOTER-->
+.
+<div class="overlayfilm stick">
+  <!-- Footer -->
+  <footer class="page-footer font-small stylish-color-dark pt-4" style=" color: rgb(255, 255, 255);" >
+  
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left">
+  
+      <!-- Grid row -->
+      <div class="row">
+  
+        <!-- Grid column -->
+        <div class="col-md-4 mx-auto ">
+  
+          <!-- Content -->
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4 blacktext">Tourism</h5>
+          <p style="font-weight: normal; font-family: 'Times New Roman', Times, serif;">Tourism  is  travel  for  pleasure  or business,  also  the  theory  and  practice  of  touring,  the  business  of  attracting, accommodating, and entertaining tourists, and the business of operating tours.</p>
+  
+        </div>
+        <!-- Grid column -->
+  
+        <hr class="clearfix w-100 d-md-none">
+  
+        <!-- Grid column -->
+        <div class="col-md-2 mx-auto" >
+  
+          <!-- Links -->
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4 blacktext">Quick Links</h5>
+          <ul class="list-unstyled"  >
+            <li >
+              <a href="#!" onMouseOver="this.style.color='aqua'"onMouseOut="this.style.color='white'" style="text-decoration:none;color: white; font-weight:normal; font-family: 'Times New Roman', Times, serif;">Home</a>
+            </li>
+            <li>
+              <a href="#!"onMouseOver="this.style.color='aqua'"onMouseOut="this.style.color='white'"style="text-decoration:none; color: white;font-weight:normal;font-family: 'Times New Roman', Times, serif;">Google Maps</a>
+            </li>
+            <li>
+              <a href="#!" onMouseOver="this.style.color='aqua'"onMouseOut="this.style.color='white'" style="text-decoration:none; color: white;font-weight:normal;font-family: 'Times New Roman', Times, serif;">Blogs</a>
+            </li>
+          </ul>
+      
+  
+        </div>
+        <!-- Grid column -->
+  
+        <hr class="clearfix w-100 d-md-none">
+  
+        <!-- Grid column -->
+        <div class="col-md-2 mx-auto">
+  
+          <!-- Links -->
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4 blacktext">Services</h5>
+  
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!" onMouseOver="this.style.color='aqua'"onMouseOut="this.style.color='white'" style="text-decoration:none; color: white;font-weight:normal; font-family: 'Times New Roman', Times, serif;">Train Booking</a>
+            </li>
+            <li>
+              <a href="#!" onMouseOver="this.style.color='aqua'"onMouseOut="this.style.color='white'" style="text-decoration:none; color: white;font-weight:normal;font-family: 'Times New Roman', Times, serif;">Flights Booking</a>
+            </li>
+            <li>
+              <a href="#!" onMouseOver="this.style.color='aqua'"onMouseOut="this.style.color='white'" style="text-decoration:none; color: white; font-weight:normal;font-family: 'Times New Roman', Times, serif;">Explore More</a>
+            </li>
+          </ul>
+  
+        </div>
+        <!-- Grid column -->
+  
+        <hr class="clearfix w-100 d-md-none">
+  
+        <!-- Grid column -->
+        <div class="col-md-2 mx-auto">
+  
+          <!-- Links -->
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4 blacktext">About Us</h5>
+  
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!" onMouseOver="this.style.color='aqua'"onMouseOut="this.style.color='white'" style="text-decoration:none; color: white; font-weight:normal; font-family: 'Times New Roman', Times, serif; ">Contact Us</a>
+          </li>
+            <li>
+              <a href="#!" onMouseOver="this.style.color='aqua'"onMouseOut="this.style.color='white'" style="text-decoration:none; color: white; font-weight:normal;font-family: 'Times New Roman', Times, serif;">Partners</a>
+            </li>
+             <li>
+              <a href="#!" onMouseOver="this.style.color='aqua'"onMouseOut="this.style.color='white'" style="text-decoration:none; color: white; font-weight:normal;font-family: 'Times New Roman', Times, serif;">Site Map</a>
+            </li>
+          </ul>
+  
+        </div>
+        <!-- Grid column -->
+  
+      </div>
+      <!-- Grid row -->
+  
+    </div>
+    <!-- Footer Links -->
+ 
+    
+  
+    <ul class="list-unstyled list-inline text-center py-2">
+      <li class="list-inline-item">
+        <h5 class="mb-1 blacktext" style="font-size: 18px;">Register for free</h5>
+      </li>
+      <li class="list-inline-item">
+        <a href="#!" class="btn btn-danger btn-rounded">Sign up!</a>
+      </li>
+    </ul>
+    <!-- Call to action -->
+ 
+    <!-- Social buttons -->
+      <ul class="list-unstyled list-inline text-center " >
+      <li class="list-inline-item "style="font-size: 25px; color:#fffff " >
+        <a class="btn-floating btn-fb mx-1">
+         <i class="fab fa-facebook-f" ></i>
+        </a>
+      </li>
+      <li class="list-inline-item darktext"style="font-size: 25px; color:#fffff">
+        <a class="btn-floating btn-tw mx-1">
+          <i class="fab fa-twitter"> </i>
+        </a>
+      </li>
+      <li class="list-inline-item darktext"style="font-size: 25px; color:#fffff">
+        <a class="btn-floating btn-gplus mx-1">
+          <i class="fab fa-google-plus-g"> </i>
+        </a>
+      </li>
+      <li class="list-inline-item darktext" style="font-size: 25px;color:#fffff">
+        <a class="btn-floating btn-li mx-1">
+          <i class="fab fa-linkedin-in"> </i>
+        </a>
+      </li>
+    </ul>
+    
+    <!-- Social buttons -->
+  </footer>
+  <!-- Footer -->
+  </div>
+ 
+ 
+  <!--FOOTER-->
+ 
+
+
+</div>   
+    
+  
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">  
+  
+  </div>
+  
+ 
+
+
+</body>
+
+</html>

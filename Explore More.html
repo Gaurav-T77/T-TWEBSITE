@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>Explore More</title>
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <link rel="stylesheet" href="ExploreMore.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="bootstrap.min.css">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="Search Result.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+<style>
+header{
+ 
+  display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 70px;
+
+  }
+
+.responsive{
+    max-width: 100%;
+    height: auto;
+}
+.logo{
+    cursor: pointer;
+}
+.nav-area{
+    list-style: none;
+}
+.nav-area li{
+    display: inline-block;
+    padding: 0
+     15px;
+    text-transform: uppercase;
+}
+.nav-area li a{
+    transition: all .3s ease 0s;
+    color: #fff;
+}
+.nav-area li a:hover{
+    color: #9becba;
+}
+.btn-area {
+    cursor: pointer;
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    border-radius: 5px;
+    background: #006C87;  
+    transition-duration: 0.4s;
+    cursor: pointer;          
+}
+.btn-area:hover {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+</style>
+
+
+</head>
+
+<header>
+  <a href="BookingMain.html" > <img class="logo" src="https://i.postimg.cc/XYgSxQQZ/logo.png" alt="" ></a>
+  <nav>
+      <ul class="nav-area">
+<li><a href="#" style="text-decoration: none; font-family: 'Times New Roman', Times, serif;"><b>home</b></a></li>
+<li><a href="#" style="text-decoration: none; font-family: 'Times New Roman', Times, serif;"><b>About</b></a></li>
+<li><a href="#" style="text-decoration: none; font-family: 'Times New Roman', Times, serif;"><b>portfolio</b></a></li>
+<li><a href="#" style="text-decoration: none; font-family: 'Times New Roman', Times, serif;"><b>services</b></a></li>
+<li><a href="#" style="text-decoration: none; font-family: 'Times New Roman', Times, serif;"><b>contact</b></a></li>
+</ul>
+
+</nav>
+  <a href="#" class="btn-area" style="text-decoration: none; font-family: 'Times New Roman', Times, serif; "><b>login</b></a>
+</header>
+
+<body style="background-size: cover; background-image: url(bg3.jpg); ">
+  <br>
+  <h1 style="text-align: center;color:whitesmoke;font-size: 350%;font-family:'Times New Roman', Times, serif" >
+    ༺TRENDING PACKAGES༻
+    </h1>
+    <section id="pack" class="packages">
+        <div class="view ">
+        <div class="container">
+          <div class="gallary-header text-center">
+          </div><!--/.gallery-header-->
+          <div class="packages-content">
+            <div class="row">
+      
+              <div class="col-md-4 col-sm-6 thumbs">
+                <div class="single-package-item ">
+                  <img src="Package_photos\KulluManali.jpg" alt="package-place">
+                  <div class="single-package-item-txt">
+                    <h3>Manali, Himachal Pradesh <span class="pull-right">₹9000</span></h3>
+                    
+                    <div class="packages-para">
+                      <p >
+                        <span>
+                          <i class="fa fa-angle-right"></i> 5 Days 6 Nights
+                        </span>
+                      <i class="fa fa-angle-right"></i>  5 star accomodation
+                      </p>
+                      <p>
+                        <span>
+                          <i class="fa fa-angle-right"></i>  Transportation
+                        </span>
+                        <i class="fa fa-angle-right"></i>  Trekking & Sight</p>
+                    </div><!--/.packages-para-->
+                    <div class="packages-review">
+                      <p>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <span>4844 review</span>
+                      </p>
+                    </div><!--/.packages-review-->
+                    <div class="about-btn">
+                      <button  class="about-view packages-btn">
+                        book now
+                      </button>
+                    </div><!--/.about-btn-->
+                  </div><!--/.single-package-item-txt-->
+                </div><!--/.single-package-item-->
+      
+              </div><!--/.col-->
+      
+              <div class="col-md-4 col-sm-6 thumbs">
+                <div class="single-package-item ">
+                  <img src="Package_photos\GOA2.jpg" alt="package-place">
+                  <div class="single-package-item-txt">
+                    <h3>Goa <span class="pull-right">₹10000</span></h3>
+                    <div class="packages-para">
+                      <p>
+                        <span>
+                          <i class="fa fa-angle-right"></i> 6 Days 7 nights
+                        </span>
+                        <i class="fa fa-angle-right"></i>  5 star accomodation
+                      </p>
+                      <p>
+                        <span>
+                          <i class="fa fa-angle-right"></i>  Water Sports
+                        </span>
+                        <i class="fa fa-angle-right"></i>Music Festivals 
+                       </p>
+                    </div><!--/.packages-para-->
+                    <div class="packages-review">
+                      <p>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <span>6879 review</span>
+                      </p>
+                    </div><!--/.packages-review-->
+                    <div class="about-btn">
+                      <button  class="about-view packages-btn">
+                        book now
+                      </button>
+                    </div><!--/.about-btn-->
+                  </div><!--/.single-package-item-txt-->
+                </div><!--/.single-package-item-->
+      
+              </div><!--/.col-->
+              
+              <div class="col-md-4 col-sm-6 thumbs">
+                <div class="single-package-item ">
+                  <img src="Package_photos\Jog falls.jpg" alt="package-place" >
+                  <div class="single-package-item-txt">
+                    <h3>Jog Falls,Karnataka <span class="pull-right">₹8000</span></h3>
+                    <div class="packages-para">
+                      <p>
+                        <span>
+                          <i class="fa fa-angle-right"></i> 4 Days 5 Nights
+                        </span>
+                        <i class="fa fa-angle-right"></i>  3 star accomodation
+                      </p>
+                      <p>
+                        <span>
+                          <i class="fa fa-angle-right"></i>  Transportation
+                        </span>
+                        <i class="fa fa-angle-right"></i>   Hiking
+                       </p>
+                    </div><!--/.packages-para-->
+                    <div class="packages-review">
+                      <p>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>                  
+                        <span>2154 review</span>
+                      </p>
+                    </div><!--/.packages-review-->
+                    <div class="about-btn">
+                      <button  class="about-view packages-btn">
+                        book now
+                      </button>
+                    </div><!--/.about-btn-->
+                   
+                  </div><!--/.single-package-item-txt-->
+                </div><!--/.single-package-item-->
+      
+              </div><!--/.col-->
+              
+              <div class="col-md-4 col-sm-6 thumbs">
+                <div class="single-package-item ">
+                  <img src="Package_photos\IndiaGate1.jpg " alt="package-place">
+                  <div class="single-package-item-txt">
+                    <h3>Delhi <span class="pull-right">₹14000</span></h3>
+                    <div class="packages-para">
+                      <p>
+                        <span>
+                          <i class="fa fa-angle-right"></i> 4 days 5 nights
+                        </span>
+                        <i class="fa fa-angle-right"></i>  4 star accomodation
+                      </p>
+                      <p>
+                        <span>
+                          <i class="fa fa-angle-right"></i>  transportation
+                        </span>
+                        <i class="fa fa-angle-right"></i>  Historical Places
+                       </p>
+                    </div><!--/.packages-para-->
+                    <div class="packages-review">
+                      <p>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <span>2544 review</span>
+                      </p>
+                    </div><!--/.packages-review-->
+                    <div class="about-btn">
+                      <button  class="about-view packages-btn">
+                        book now
+                      </button>
+                    </div><!--/.about-btn-->
+                 
+                </div><!--/.single-package-item-txt-->
+                </div><!--/.single-package-item-->
+      
+              </div><!--/.col-->
+              
+              <div class="col-md-4 col-sm-6 thumbs">
+                <div class="single-package-item ">
+                  <img src="Package_photos\Shillong.jpg" alt="package-place">
+                  <div class="single-package-item-txt">
+                    <h3>Shllong, Meghalaya <span class="pull-right">₹12000</span></h3>
+                    <div class="packages-para">
+                      <p>
+                        <span>
+                          <i class="fa fa-angle-right"></i> 7 days 8 nights
+                        </span>
+                        <i class="fa fa-angle-right"></i>  3 star accomodation
+                      </p>
+                      <p>
+                        <span>
+                          <i class="fa fa-angle-right"></i>  transportation
+                        </span>
+                        <i class="fa fa-angle-right"></i> Trekking & Sight
+                       </p>
+                    </div><!--/.packages-para-->
+                    <div class="packages-review">
+                      <p>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        
+                        <span>3784 review</span>
+                      </p>
+                    </div><!--/.packages-review-->
+                    <div class="about-btn">
+                      <button  class="about-view packages-btn">
+                        book now
+                      </button>
+                    </div><!--/.about-btn-->
+                  </div><!--/.single-package-item-txt-->
+                </div><!--/.single-package-item-->
+      
+              </div><!--/.col-->
+              
+              <div class="col-md-4 col-sm-6 thumbs">
+                <div class="single-package-item ">
+                  <img src="Package_photos\Ooty.jpg" alt="package-place">
+                  <div class="single-package-item-txt">
+                    <h3>Ooty Hills, Tamil Nadu <span class="pull-right">₹20000</span></h3>
+                    <div class="packages-para">
+                      <p>
+                        <span>
+                          <i class="fa fa-angle-right"></i> 6 days 7 nights
+                        </span>
+                        <i class="fa fa-angle-right"></i>  5 star accomodation
+                      </p>
+                      <p>
+                        <span>
+                          <i class="fa fa-angle-right"></i> House Boating
+                        </span>
+                        <i class="fa fa-angle-right"></i> Sight-Seeing 
+                       </p>
+                    </div><!--/.packages-para-->
+                    <div class="packages-review">
+                      <p>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <span>4564 review</span>
+                      </p>
+                    
+                  </div><!--/.packages-review-->
+                  
+                    
+                  <div class="about-btn">
+                      <button  class="about-view packages-btn">
+                        book now
+                      </button>
+                    </div><!--/.about-btn-->
+                  
+                  </div><!--/.single-package-item-txt-->
+                </div><!--/.single-package-item-->
+      
+              </div><!--/.col-->
+      
+              <div class="col-md-4 col-sm-6 thumbs">
+                <div class="single-package-item ">
+                  <img src="Package_photos\KulluManali.jpg" alt="package-place">
+                  <div class="single-package-item-txt">
+                    <h3>Manali, Himachal Pradesh <span class="pull-right">₹9000</span></h3>
+                    
+                    <div class="packages-para">
+                      <p >
+                        <span>
+                          <i class="fa fa-angle-right"></i> 5 Days 6 Nights
+                        </span>
+                      <i class="fa fa-angle-right"></i>  5 star accomodation
+                      </p>
+                      <p>
+                        <span>
+                          <i class="fa fa-angle-right"></i>  Transportation
+                        </span>
+                        <i class="fa fa-angle-right"></i>  Trekking & Sight</p>
+                    </div><!--/.packages-para-->
+                    <div class="packages-review">
+                      <p>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <span>4844 review</span>
+                      </p>
+                    </div><!--/.packages-review-->
+                    <div class="about-btn">
+                      <button  class="about-view packages-btn">
+                        book now
+                      </button>
+                    </div><!--/.about-btn-->
+                  </div><!--/.single-package-item-txt-->
+                </div><!--/.single-package-item-->
+      
+              </div><!--/.col-->
+
+
+              <div class="col-md-4 col-sm-6 thumbs">
+                <div class="single-package-item ">
+                  <img src="Package_photos\KulluManali.jpg" alt="package-place">
+                  <div class="single-package-item-txt">
+                    <h3>Manali, Himachal Pradesh <span class="pull-right">₹9000</span></h3>
+                    
+                    <div class="packages-para">
+                      <p >
+                        <span>
+                          <i class="fa fa-angle-right"></i> 5 Days 6 Nights
+                        </span>
+                      <i class="fa fa-angle-right"></i>  5 star accomodation
+                      </p>
+                      <p>
+                        <span>
+                          <i class="fa fa-angle-right"></i>  Transportation
+                        </span>
+                        <i class="fa fa-angle-right"></i>  Trekking & Sight</p>
+                    </div><!--/.packages-para-->
+                    <div class="packages-review">
+                      <p>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <span>4844 review</span>
+                      </p>
+                    </div><!--/.packages-review-->
+                    <div class="about-btn">
+                      <button  class="about-view packages-btn">
+                        book now
+                      </button>
+                    </div><!--/.about-btn-->
+                  </div><!--/.single-package-item-txt-->
+                </div><!--/.single-package-item-->
+      
+              </div><!--/.col-->
+
+
+              <div class="col-md-4 col-sm-6 thumbs">
+                <div class="single-package-item ">
+                  <img src="Package_photos\KulluManali.jpg" alt="package-place">
+                  <div class="single-package-item-txt">
+                    <h3>Manali, Himachal Pradesh <span class="pull-right">₹9000</span></h3>
+                    
+                    <div class="packages-para">
+                      <p >
+                        <span>
+                          <i class="fa fa-angle-right"></i> 5 Days 6 Nights
+                        </span>
+                      <i class="fa fa-angle-right"></i>  5 star accomodation
+                      </p>
+                      <p>
+                        <span>
+                          <i class="fa fa-angle-right"></i>  Transportation
+                        </span>
+                        <i class="fa fa-angle-right"></i>  Trekking & Sight</p>
+                    </div><!--/.packages-para-->
+                    <div class="packages-review">
+                      <p>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <span>4844 review</span>
+                      </p>
+                    </div><!--/.packages-review-->
+                    <div class="about-btn">
+                      <button  class="about-view packages-btn">
+                        book now
+                      </button>
+                    </div><!--/.about-btn-->
+                  </div><!--/.single-package-item-txt-->
+                </div><!--/.single-package-item-->
+      
+              </div><!--/.col-->
+
+
+
+            </div><!--/.row-->
+            <br><br><br><br><br>
+          </div><!--/.packages-content-->
+        </div><!--/.container-->
+      </div>
+      
+      </section><!--/.packages-->
+      
+      <!--packages end-->
+
+
+
+<!--FOOTER-->
+
+
+
+
+<div class="overlayfilm stick">
+ <!-- Footer -->
+ <footer class="page-footer font-small stylish-color-dark pt-4" style=" color: rgb(255, 255, 255);" >
+ 
+   <!-- Footer Links -->
+   <div class="container text-center text-md-left">
+ 
+     <!-- Grid row -->
+     <div class="row">
+ 
+       <!-- Grid column -->
+       <div class="col-md-4 mx-auto ">
+ 
+         <!-- Content -->
+         <h5 class="font-weight-bold text-uppercase mt-3 mb-4 blacktext">Tourism</h5>
+         <p style="font-weight: normal; font-family: 'Times New Roman', Times, serif;">Tourism  is  travel  for  pleasure  or business,  also  the  theory  and  practice  of  touring,  the  business  of  attracting, accommodating, and entertaining tourists, and the business of operating tours.</p>
+ 
+       </div>
+       <!-- Grid column -->
+ 
+       <hr class="clearfix w-100 d-md-none">
+ 
+       <!-- Grid column -->
+       <div class="col-md-2 mx-auto" >
+ 
+         <!-- Links -->
+         <h5 class="font-weight-bold text-uppercase mt-3 mb-4 blacktext">Quick Links</h5>
+         <ul class="list-unstyled"  >
+           <li >
+             <a href="#!" onMouseOver="this.style.color='aqua'"onMouseOut="this.style.color='white'" style="text-decoration:none;color: white; font-weight:normal; font-family: 'Times New Roman', Times, serif;">Home</a>
+           </li>
+           <li>
+             <a href="#!" onMouseOver="this.style.color='aqua'"onMouseOut="this.style.color='white'"style="text-decoration:none; color: white;font-weight:normal;font-family: 'Times New Roman', Times, serif;">Our Packages</a>
+           </li>
+           <li>
+             <a href="#!"onMouseOver="this.style.color='aqua'"onMouseOut="this.style.color='white'"style="text-decoration:none; color: white;font-weight:normal;font-family: 'Times New Roman', Times, serif;">Google Maps</a>
+           </li>
+           <li>
+             <a href="#!" onMouseOver="this.style.color='aqua'"onMouseOut="this.style.color='white'" style="text-decoration:none; color: white;font-weight:normal;font-family: 'Times New Roman', Times, serif;">Blogs</a>
+           </li>
+         </ul>
+     
+ 
+       </div>
+       <!-- Grid column -->
+ 
+       <hr class="clearfix w-100 d-md-none">
+ 
+       <!-- Grid column -->
+       <div class="col-md-2 mx-auto">
+ 
+         <!-- Links -->
+         <h5 class="font-weight-bold text-uppercase mt-3 mb-4 blacktext">Services</h5>
+ 
+         <ul class="list-unstyled">
+           <li>
+             <a href="#!" onMouseOver="this.style.color='aqua'"onMouseOut="this.style.color='white'" style="text-decoration:none; color: white;font-weight:normal; font-family: 'Times New Roman', Times, serif;">Train Booking</a>
+           </li>
+           <li>
+             <a href="#!" onMouseOver="this.style.color='aqua'"onMouseOut="this.style.color='white'" style="text-decoration:none; color: white;font-weight:normal;font-family: 'Times New Roman', Times, serif;">Flights Booking</a>
+           </li>
+           <li>
+             <a href="#!" onMouseOver="this.style.color='aqua'"onMouseOut="this.style.color='white'" style="text-decoration:none; color: white;font-weight:normal;font-family: 'Times New Roman', Times, serif;">Travel Packages</a>
+           </li>
+           <li>
+             <a href="#!" onMouseOver="this.style.color='aqua'"onMouseOut="this.style.color='white'" style="text-decoration:none; color: white; font-weight:normal;font-family: 'Times New Roman', Times, serif;">Explore More</a>
+           </li>
+         </ul>
+ 
+       </div>
+       <!-- Grid column -->
+ 
+       <hr class="clearfix w-100 d-md-none">
+ 
+       <!-- Grid column -->
+       <div class="col-md-2 mx-auto">
+ 
+         <!-- Links -->
+         <h5 class="font-weight-bold text-uppercase mt-3 mb-4 blacktext">About Us</h5>
+ 
+         <ul class="list-unstyled">
+           <li>
+             <a href="#!" onMouseOver="this.style.color='aqua'"onMouseOut="this.style.color='white'" style="text-decoration:none; color: white; font-weight:normal; font-family: 'Times New Roman', Times, serif; ">Contact Us</a>
+         </li>
+           <li>
+             <a href="#!" onMouseOver="this.style.color='aqua'"onMouseOut="this.style.color='white'" style="text-decoration:none; color: white; font-weight:normal;font-family: 'Times New Roman', Times, serif;">Partners</a>
+           </li>
+           <li>
+             <a href="#!" onMouseOver="this.style.color='aqua'"onMouseOut="this.style.color='white'" style="text-decoration:none;color: white; font-weight:normal;font-family: 'Times New Roman', Times, serif;">Job Oppurtunities</a>
+           </li>
+           <li>
+             <a href="#!" onMouseOver="this.style.color='aqua'"onMouseOut="this.style.color='white'" style="text-decoration:none; color: white; font-weight:normal;font-family: 'Times New Roman', Times, serif;">Site Map</a>
+           </li>
+         </ul>
+ 
+       </div>
+       <!-- Grid column -->
+ 
+     </div>
+     <!-- Grid row -->
+ 
+   </div>
+   <!-- Footer Links -->
+
+   <!-- Call to action -->
+ 
+   <ul class="list-unstyled list-inline text-center py-2">
+     <li class="list-inline-item">
+       <h5 class="mb-1 blacktext" style="font-size: 18px;">Register for free</h5>
+     </li>
+     <li class="list-inline-item">
+       <a href="#!" class="btn btn-danger btn-rounded">Sign up!</a>
+     </li>
+   </ul>
+   <!-- Call to action -->
+
+   <!-- Social buttons -->
+     <ul class="list-unstyled list-inline text-center " >
+     <li class="list-inline-item "style="font-size: 25px; color:#fffff " >
+       <a class="btn-floating btn-fb mx-1">
+        <i class="fab fa-facebook-f" ></i>
+       </a>
+     </li>
+     <li class="list-inline-item darktext"style="font-size: 25px; color:#fffff">
+       <a class="btn-floating btn-tw mx-1">
+         <i class="fab fa-twitter"> </i>
+       </a>
+     </li>
+     <li class="list-inline-item darktext"style="font-size: 25px; color:#fffff">
+       <a class="btn-floating btn-gplus mx-1">
+         <i class="fab fa-google-plus-g"> </i>
+       </a>
+     </li>
+     <li class="list-inline-item darktext" style="font-size: 25px;color:#fffff">
+       <a class="btn-floating btn-li mx-1">
+         <i class="fab fa-linkedin-in"> </i>
+       </a>
+     </li>
+   </ul>
+   
+   <!-- Social buttons -->
+ </footer>
+ <!-- Footer -->
+ </div>
+
+
+ <!--FOOTER-->
+
+
+
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"></script>
+
+</body>
+
+</html>
